@@ -54,11 +54,11 @@ public class WordSearch {
       }
       else{
         for (int i=0; i<word.length(); i++) {
-          if (!(data[row+i][col] == '_' || data[row+i][col+i] == word.charAt(i))) {
+          if (!(data[row][col+i] == '_' || data[row][col+i] == word.charAt(i))) {
             works = false;
           }
           else {
-            data[row+i][col] = word.charAt(i);
+            data[row][col+i] = word.charAt(i);
           }
         }
       }
@@ -83,11 +83,11 @@ public class WordSearch {
       }
       else{
         for (int i=0; i<word.length(); i++) {
-          if (!(data[row][col+i] == '_' || data[row+i][col+i] == word.charAt(i))) {
+          if (!(data[row+i][col] == '_' || data[row+i][col] == word.charAt(i))) {
             works = false;
           }
           else {
-            data[row][col+i] = word.charAt(i);
+            data[row+i][col] = word.charAt(i);
           }
         }
       }
