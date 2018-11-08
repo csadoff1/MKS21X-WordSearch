@@ -13,8 +13,8 @@ public class WordSearch {
 
     /**Set all values in the WordSearch to underscores'_'*/
     private void clear(){
-      for (int r=0; r<rows; r++) {
-        for (int c=0; c<cols; c++) {
+      for (int r=0; r<data.length; r++) {
+        for (int c=0; c<data[r].length; c++) {
           data[r][c] = '_';
         }
       }
