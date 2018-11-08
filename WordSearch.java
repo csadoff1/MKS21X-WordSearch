@@ -58,7 +58,7 @@ public class WordSearch {
             works = false;
           }
           else {
-            data[row+i][col+i] = word.charAt(i);
+            data[row+i][col] = word.charAt(i);
           }
         }
       }
