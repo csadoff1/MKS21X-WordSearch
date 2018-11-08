@@ -54,7 +54,7 @@ public class WordSearch {
       }
       else{
         for (int i=0; i<word.length(); i++) {
-          if (!(data[row+i][col+i] == '_' || data[row+i][col+i] == word.charAt(i))) {
+          if (!(data[row+i][col] == '_' || data[row+i][col+i] == word.charAt(i))) {
             works = false;
           }
           else {
@@ -77,5 +77,20 @@ public class WordSearch {
      *and the board is NOT modified.
      */
     public boolean addWordVertical(String word,int row, int col){
+      boolean works = true;
+      if (row>data.length || col>data[row].length) {
+        works = false;
+      }
+      else{
+        for (int i=0; i<word.length(); i++) {
+          if (!(data[row][col+i] == '_' || data[row+i][col+i] == word.charAt(i))) {
+            works = false;
+          }
+          else {
+            data[row][col+i] = word.charAt(i);
+          }
+        }
+      }
+      return works;
     }
 }
