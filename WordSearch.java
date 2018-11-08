@@ -94,7 +94,7 @@ public class WordSearch {
       }
       for (int i=0; i<word.length(); i++) {
         data[row][col] = word.charAt(i);
-        col++;
+        row++;
       }
       }
       return works;
