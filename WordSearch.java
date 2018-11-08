@@ -30,7 +30,7 @@ public class WordSearch {
         for (int c=0; c<data[r].length; c++) {
           output += data[r][c] + " ";
         }
-        output += "/n";
+        output += "\n";
       }
       return output;
     }
